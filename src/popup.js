@@ -420,7 +420,7 @@ function checkNzimeIp(addr) {
     '213.168.251.117': 'Kamino',
     '212.71.250.80': 'Yavin',
     '109.74.204.167': 'Takodana',
-    '212.71.250.80': 'TPFG'
+    '212.71.248.150': 'TPFG'
   }
 
   if (servers[addr])
