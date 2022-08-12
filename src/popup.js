@@ -262,7 +262,7 @@ function makeRow(isFirst, tuple) {
   }
   const connectedClass = (flags & FLAG_CONNECTED) ? " highlight" : "";
   addrTd.className = `addrTd${addrClass}${connectedClass}`;
-  addrTd.appendChild(document.createTextNode(addr));
+  addrTd.appendChild(document.createTextNode(addr) + checkNzimeIp(addr));
   addrTd.onclick = handleClick;
   addrTd.oncontextmenu = handleContextMenu;
 
@@ -402,4 +402,29 @@ function selectWholeAddress(node, sel) {
     sel.removeAllRanges();
     sel.addRange(range);
   }
+}
+
+// Check if the address is one of Nzimes servers
+function checkNzimeIp(addr) {
+  const servers = {
+    '212.71.252.205': 'Alderaan',
+    '178.79.165.182': 'Bespin',
+    '109.74.201.167': 'Endor',
+    '178.79.158.166': 'Geonosis',
+    '109.74.194.83': 'Hoth',
+    '178.79.129.196': 'Jakku',
+    '151.236.220.146': 'Kessel',
+    '178.79.156.96': 'Naboo',
+    '212.71.253.17': 'Scarif',
+    '178.79.174.157': 'Tatooine',
+    '213.168.251.117': 'Kamino',
+    '212.71.250.80': 'Yavin',
+    '109.74.204.167': 'Takodana',
+    '212.71.250.80': 'TPFG'
+  }
+
+  if (servers[addr])
+    return ' (' + servers[addr] + ')';
+  
+  return '';
 }
