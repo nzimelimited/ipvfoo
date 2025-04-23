@@ -407,20 +407,22 @@ function selectWholeAddress(node, sel) {
 // Check if the address is one of Nzimes servers
 function checkNzimeIp(addr) {
   const servers = {
-    '212.71.252.205': 'Alderaan',
-    '178.79.165.182': 'Bespin',
-    '109.74.201.167': 'Endor',
-    '178.79.158.166': 'Geonosis',
     '109.74.194.83': 'Hoth',
+    '212.71.252.205': 'Alderaan',
+    '109.74.201.167': 'Endor',
     '178.79.129.196': 'Jakku',
-    '151.236.220.146': 'Kessel',
-    '178.79.156.96': 'Naboo',
-    '212.71.253.17': 'Scarif',
+    '139.162.216.209': 'Mandalore',
     '178.79.174.157': 'Tatooine',
-    '213.168.251.117': 'Kamino',
-    '212.71.250.80': 'Yavin',
-    '109.74.204.167': 'Takodana',
-    '212.71.248.150': 'TPFG'
+    '212.111.41.76': 'Dagobah',
+    '178.79.158.166': 'Geonosis/Corellia',
+    '139.162.226.41': 'Ando',
+    '151.236.218.10': 'Ferrix',
+    '88.80.186.16': 'Bith',
+    '176.58.96.79': 'Ryloth',
+    '212.71.250.80': 'Malachor',
+    '178.79.150.53': 'Ahchto',
+    '172.236.0.206': 'Jedha',
+    '172.236.15.47': 'Agamar'
   }
 
   if (servers[addr])
