@@ -262,7 +262,7 @@ function makeRow(isFirst, tuple) {
   }
   const connectedClass = (flags & FLAG_CONNECTED) ? " highlight" : "";
   addrTd.className = `addrTd${addrClass}${connectedClass}`;
-  addrTd.appendChild(document.createTextNode(addr) + checkNzimeIp(addr));
+  addrTd.appendChild(document.createTextNode(addr + checkNzimeIp(addr)));
   addrTd.onclick = handleClick;
   addrTd.oncontextmenu = handleContextMenu;
 
